@@ -1,0 +1,11 @@
+git help
+git init
+git config --get user.name
+git config --global user.name "Wei Jin"
+git config --global user.email "wjin@ggc.edu"
+git config --global color.ui true
+
+..create README.txt
+
+
+git status
