@@ -9,3 +9,45 @@ git config --global color.ui true
 
 
 git status
+git add README.txt
+git status
+git commit -m "Create README."
+
+..create LICENSE and modify README.txt
+
+git status
+git add --all
+git commit -m "Create LICENSE and modify README."
+
+git log
+
+..modify LICENSE.txt
+
+git add LICENSE.txt
+git diff ==> showing nothing 
+git diff --staged ==> showing the differences
+git status
+
+git reset HEAD LICENSE.txt ==> unstage LICENSE.txt
+git checkout --LICENSE.txt ==> check out the commited version, erase all modifications
+
+
+..modify README.txt
+git commit -a -m "Modify README."  ==> add to stage and commit
+
+git reset --soft HEAD~1 ==> Unroll commit, for soft, the stage is the same as before the commit (^ didn't work)
+git add todo.txt
+git commit ".. & add todo.txt."
+
+or instead of unroll the commit, do the following:
+
+git add todo.txt
+git commit --amend -m "... & add todo.txt."
+
+
+.. Created a GitHub repo 
+git remote add origin https://github.com/wjinggc/git-real-code-school.git
+git remove -v
+git push -u origin master
+
+git pull
