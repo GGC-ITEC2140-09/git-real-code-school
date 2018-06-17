@@ -18,7 +18,7 @@ git commit -m "Create README."
 ..create LICENSE and modify README.txt
 
 git status
-git add --all
+git add --all  ==> add all changed files to stage
 git commit -m "Create LICENSE and modify README."
 
 git log
@@ -133,6 +133,8 @@ git merge admin ==> This creates a commit
 git branch -d admin
 
 
+Lesson 5 Remove Branches & TAGS
+===============================
 
  
 
