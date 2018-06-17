@@ -74,3 +74,5 @@ git clone <URL>
 or 
 git clone <URL> new-name
 
+This is in the cloned version, under folder git-demo.
+
