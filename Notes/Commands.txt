@@ -111,7 +111,7 @@ git merge cat
 got branch -d cat  ==> delete branch cat
 
 ..Now create another branch admin (in a faster way)
-git checkout -b admin
+git checkout -b admin ==> create and checkout a branch called admin
 ..create dashboard.html
 git add dashboard.html
 git commit -m "Add dashboard".
