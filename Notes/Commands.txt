@@ -135,8 +135,32 @@ git branch -d admin
 
 Lesson 5 Remove Branches & TAGS
 ===============================
+For a branch that has a life time longer than 1 day, a remote repo branch should be created for backup.
 
- 
+Gregg:  
+git checkout -b shopping_cart
+git push origin shopping_cart ==> link local branch to remote branch
+git add shopping_cart.txt
+git commit -a -m "Add basic cart ability."
+git push
+
+Jane:
+git pull ==> will show a new remote branch
+git branch => only see master
+git branch -r ==> list all remote branches
+git checkout shopping_cart ==> local branch will set up to track remote branch 
+..Now Jane can work on this branch and when ready push her changes to the remote.
+git remote show origin
+git push origin :shopping_cart => push and then delete the remote branch
+git branch -d shopping_cart ==> delete the local shopping_cart branch
+
+Gregg:
+On local shopping_cart branch:
+git commit -m "xxx"
+git push ==> Current branch has no upstream branch
+git remove show origin
+git remote prune origin //clean stale branche references that are stale
+
 
 
 
