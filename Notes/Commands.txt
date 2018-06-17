@@ -1,3 +1,5 @@
+Lesson 1 & 2
+===============
 git help
 git init
 git config --get user.name
@@ -47,7 +49,28 @@ git commit --amend -m "... & add todo.txt."
 
 .. Created a GitHub repo 
 git remote add origin https://github.com/wjinggc/git-real-code-school.git
-git remove -v
+git remote -v
 git push -u origin master
 
-git pull
+git pull ==> get changes from other people to the remote
+
+Summary: 
+To add a new remote:
+git remote add <name> <url address>
+
+To remove a remote:
+git remote rm <name>
+
+To push to a remote:
+git push -u <name> <branch>  //<branch> is usually master  
+//-u makes git to remember the name and branch, so next time, you can simply type "git push"
+
+DON'T do reset or "commit --amend" after push.
+
+
+Lesson 3 -- Cloning and Branching
+=================================
+git clone <URL> 
+or 
+git clone <URL> new-name
+
