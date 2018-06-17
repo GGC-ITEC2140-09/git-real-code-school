@@ -76,3 +76,65 @@ git clone <URL> new-name
 
 This is in the cloned version, under folder git-demo.
 
+
+git clone <URL> git-demo
+.. did some change to notes
+git status
+git commit -a -m "Changed notes from cloned copy, git-demo."
+git push
+
+.. go to the original local copy.
+git pull ==> Updated the repo with the commit from git-demo
+
+.. go to git-demo
+git branch cat ==> create a new branch cat
+git branch ==> list all branches and see which branch the HEAD is on
+git checkout cat ==> switch to cat branch
+
+echo "Schrudinger" > cat.txt
+git add cat.txt
+git commit -m "Create quantum cat."
+
+dir ==> You will see cat.txt
+
+git checkout master  ==> go to the master branch/timeline
+dir ==> you will not see cat.txt
+git log ==> it will not show the commit for "Create quantum cat."
+
+git checkout cat ==> just to check, go back to cat timeline
+dir ==> you will see cat.txt
+git lot ==> it will show the commit for "Create quantum cat."
+
+.. Now done with the feature branch cat. Time to merge
+git checkout master
+git merge cat
+got branch -d cat  ==> delete branch cat
+
+..Now create another branch admin (in a faster way)
+git checkout -b admin
+..create dashboard.html
+git add dashboard.html
+git commit -m "Add dashboard".
+
+.. Need to fix issues on master brahcn. The remote repo may have changed, so do a pull first.
+git pull
+.. changes LICENSE.txt
+git commit -m "Add more info to LICENSE.txt."
+git push
+
+git checkout admin
+..complete dashboard.html
+git add dashboard.html
+git commit -m "compelte dashboard.html."
+
+..Time to merge
+git checkout master
+git merge admin ==> This creates a commit
+git branch -d admin
+
+
+
+ 
+
+
+
